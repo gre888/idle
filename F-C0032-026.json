@@ -1,0 +1,45 @@
+{
+ "cwaopendata": {
+  "@xmlns": "urn:cwb:gov:tw:cwbcommon:0.1",
+  "Identifier": "f25d0642-b159-11f1-a76d-0242ac110007",
+  "Sender": "fss@wfc.cwa.gov.tw",
+  "Sent": "2026-09-16T07:05:30+08:00",
+  "Status": "Actual",
+  "Scope": "Public",
+  "MsgType": "Issue",
+  "Dataid": "F-C0032-026",
+  "Source": "Weather Forecast Center",
+  "Dataset": {
+   "DatasetInfo": {
+    "DatasetDescription": "天氣小幫手",
+    "DatasetLanguage": "zh-TW",
+    "DataValueInfo": {
+     "WeatherDescription": {
+      "@description": "天氣預報綜合描述",
+      "@unit": "NA"
+     }
+    },
+    "IssueTime": "2026-09-16T07:05:30+08:00"
+   },
+   "Locations": {
+    "Location": {
+     "LocationName": "南投縣",
+     "StationID": "46765",
+     "Geocode": "10008000",
+     "WeatherElement": {
+      "ElementName": "天氣預報綜合描述",
+      "ElementValue": {
+       "WeatherDescription": [
+        "晴時多雲，天氣穩定且舒適",
+        "今日白天（16日）天氣晴時多雲，降雨機率10%，氣溫24至33度，感覺舒適至悶熱。",
+        "提醒您，今日稍嫌悶熱但天氣穩定，請穿著輕便衣物並注意防曬。",
+        "今晚明晨天氣晴時多雲，降雨機率0%，氣溫24至29度，感覺舒適。",
+        "提醒您，今晚明晨天氣宜人，無降雨之虞，建議安排戶外行程。"
+       ]
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "cwaopendata": {
+  "@xmlns": "urn:cwb:gov:tw:cwbcommon:0.1",
+  "Identifier": "f04c24aa-b159-11f1-9d8e-0242ac110008",
+  "Sender": "fss@wfc.cwa.gov.tw",
+  "Sent": "2026-09-16T07:05:26+08:00",
+  "Status": "Actual",
+  "Scope": "Public",
+  "MsgType": "Issue",
+  "Dataid": "F-C0032-018",
+  "Source": "Weather Forecast Center",
+  "Dataset": {
+   "DatasetInfo": {
+    "DatasetDescription": "天氣小幫手",
+    "DatasetLanguage": "zh-TW",
+    "DataValueInfo": {
+     "WeatherDescription": {
+      "@description": "天氣預報綜合描述",
+      "@unit": "NA"
+     }
+    },
+    "IssueTime": "2026-09-16T07:05:26+08:00"
+   },
+   "Locations": {
+    "Location": {
+     "LocationName": "嘉義縣",
+     "StationID": "49748",
+     "Geocode": "10010000",
+     "WeatherElement": {
+      "ElementName": "天氣預報綜合描述",
+      "ElementValue": {
+       "WeatherDescription": [
+        "晴時多雲，天氣穩定且舒適",
+        "今日白天（16日）天氣晴時多雲，降雨機率10%，氣溫25至32度，感覺舒適至悶熱。",
+        "風浪：東北風5至6陣風8級下午轉6至7陣風9級，浪高2至3公尺，屬於中浪至大浪。",
+        "提醒您，今日稍嫌悶熱但天氣穩定，請穿著輕便衣物並注意防曬。強風特報，注意風勢與行車安全。",
+        "今晚明晨天氣晴時多雲，降雨機率10%，氣溫25至29度，感覺舒適。",
+        "風浪：東北風6至7陣風9級晨轉5至6陣風8級，浪高3轉2公尺，屬於大浪轉中浪。",
+        "提醒您，今晚明晨天氣穩定且舒適，適合各類戶外活動。"
+       ]
+      }
+     }
+    }
+   }
+  }
+ }
+}

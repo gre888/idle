@@ -1,0 +1,47 @@
+{
+ "cwaopendata": {
+  "@xmlns": "urn:cwb:gov:tw:cwbcommon:0.1",
+  "Identifier": "f3a9de94-b159-11f1-92e8-0242ac11000a",
+  "Sender": "fss@wfc.cwa.gov.tw",
+  "Sent": "2026-09-16T07:05:32+08:00",
+  "Status": "Actual",
+  "Scope": "Public",
+  "MsgType": "Issue",
+  "Dataid": "F-C0032-027",
+  "Source": "Weather Forecast Center",
+  "Dataset": {
+   "DatasetInfo": {
+    "DatasetDescription": "天氣小幫手",
+    "DatasetLanguage": "zh-TW",
+    "DataValueInfo": {
+     "WeatherDescription": {
+      "@description": "天氣預報綜合描述",
+      "@unit": "NA"
+     }
+    },
+    "IssueTime": "2026-09-16T07:05:32+08:00"
+   },
+   "Locations": {
+    "Location": {
+     "LocationName": "臺東縣",
+     "StationID": "46766",
+     "Geocode": "10014000",
+     "WeatherElement": {
+      "ElementName": "天氣預報綜合描述",
+      "ElementValue": {
+       "WeatherDescription": [
+        "晴時多雲，天氣穩定且舒適",
+        "今日白天（16日）天氣晴時多雲，降雨機率10%，氣溫25至30度，感覺舒適至悶熱。",
+        "風浪：東北風6至7陣風9級上午轉5至6陣風8級，浪高3轉2公尺，屬於大浪轉中浪。",
+        "提醒您，今日天氣溫暖略帶悶熱，適合戶外活動，建議穿著透氣服裝並注意補水。強風特報，注意風勢與行車安全。",
+        "今晚明晨天氣多雲時晴，降雨機率10%，氣溫25至28度，感覺舒適。",
+        "風浪：東北風5至6陣風8級下午轉4至5陣風7級，浪高1至2公尺，屬於小浪至中浪。",
+        "提醒您，今晚明晨天氣宜人，無降雨之虞，建議安排戶外行程。"
+       ]
+      }
+     }
+    }
+   }
+  }
+ }
+}

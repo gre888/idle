@@ -1,0 +1,47 @@
+{
+ "cwaopendata": {
+  "@xmlns": "urn:cwb:gov:tw:cwbcommon:0.1",
+  "Identifier": "f3a42a44-b159-11f1-9680-0242ac110008",
+  "Sender": "fss@wfc.cwa.gov.tw",
+  "Sent": "2026-09-16T07:05:32+08:00",
+  "Status": "Actual",
+  "Scope": "Public",
+  "MsgType": "Issue",
+  "Dataid": "F-C0032-010",
+  "Source": "Weather Forecast Center",
+  "Dataset": {
+   "DatasetInfo": {
+    "DatasetDescription": "天氣小幫手",
+    "DatasetLanguage": "zh-TW",
+    "DataValueInfo": {
+     "WeatherDescription": {
+      "@description": "天氣預報綜合描述",
+      "@unit": "NA"
+     }
+    },
+    "IssueTime": "2026-09-16T07:05:32+08:00"
+   },
+   "Locations": {
+    "Location": {
+     "LocationName": "新北市",
+     "StationID": "46692",
+     "Geocode": "65000000",
+     "WeatherElement": {
+      "ElementName": "天氣預報綜合描述",
+      "ElementValue": {
+       "WeatherDescription": [
+        "多雲時陰，天氣整體舒適，但仍有降雨機率",
+        "今日白天（16日）天氣多雲時陰，降雨機率20%，氣溫25至29度，感覺舒適。",
+        "風浪：東北風4至5陣風7級，浪高1至2公尺，屬於小浪至中浪。",
+        "提醒您，今日天氣整體舒適，但仍有降雨機率，請備妥雨具。",
+        "今晚明晨天氣多雲時晴，降雨機率10%，氣溫24至26度，感覺舒適。",
+        "風浪：東北風4至5陣風7級，浪高2轉1公尺，屬於中浪轉小浪。",
+        "提醒您，今晚明晨天氣穩定且舒適，適合各類戶外活動。"
+       ]
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "cwaopendata": {
+  "@xmlns": "urn:cwb:gov:tw:cwbcommon:0.1",
+  "Identifier": "f359d4e4-b159-11f1-97f6-0242ac110008",
+  "Sender": "fss@wfc.cwa.gov.tw",
+  "Sent": "2026-09-16T07:05:31+08:00",
+  "Status": "Actual",
+  "Scope": "Public",
+  "MsgType": "Issue",
+  "Dataid": "F-C0032-013",
+  "Source": "Weather Forecast Center",
+  "Dataset": {
+   "DatasetInfo": {
+    "DatasetDescription": "天氣小幫手",
+    "DatasetLanguage": "zh-TW",
+    "DataValueInfo": {
+     "WeatherDescription": {
+      "@description": "天氣預報綜合描述",
+      "@unit": "NA"
+     }
+    },
+    "IssueTime": "2026-09-16T07:05:31+08:00"
+   },
+   "Locations": {
+    "Location": {
+     "LocationName": "宜蘭縣",
+     "StationID": "46708",
+     "Geocode": "10002000",
+     "WeatherElement": {
+      "ElementName": "天氣預報綜合描述",
+      "ElementValue": {
+       "WeatherDescription": [
+        "陰短暫陣雨，天氣整體舒適，但仍有降雨機率",
+        "今日白天（16日）天氣陰短暫陣雨，降雨機率30%，氣溫25至29度，感覺舒適。",
+        "風浪：東北轉偏北風4至5陣風7級，浪高1至2公尺，屬於小浪至中浪。",
+        "提醒您，今日多雲為主，戶外活動請注意短時降雨，備妥雨具。",
+        "今晚明晨天氣陰時多雲，降雨機率20%，氣溫24至27度，感覺舒適。",
+        "風浪：偏北轉東北風4至5陣風7級晨轉4級陣風6級以下，浪高2轉1公尺，屬於中浪轉小浪。",
+        "提醒您，今晚明晨天氣整體舒適，但仍有降雨機率，請備妥雨具。"
+       ]
+      }
+     }
+    }
+   }
+  }
+ }
+}
