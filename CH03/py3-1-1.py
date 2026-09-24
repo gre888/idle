@@ -180,5 +180,38 @@ all_news = pd.concat([df1, df2],ignore_index=True)
 print(all_news)
 
 
+list1 = list(range(1,101))
+# 找出所有偶數的項目
+list2 = []
+for i in list1:
+    if i % 2 == 0:
+        print(i, end=" ")
+        list2.append(i)
+print(list2)
+
+
+# comprehension 推導方式找出所有偶數的項目
+list3 = [x for x in list1 if x % 2 == 0]
+print(list3)
+
+# 用dataframe來寫
+df = pd.DataFrame({"numbers": list1})
+even_df = df[df["numbers"] % 2 == 0]
+print(even_df)
+
+#法4
+#任務直接透過dataframe來找出所有偶數的項目
+data= list(range(1,101))
+import pandas as pd
+df =  pd.DataFrame(data)
+
+
+even_df2 = df.loc[df["numbers"] % 2 == 0]
+print(even_df2)
+
+
+
+
+
 
 

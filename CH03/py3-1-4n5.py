@@ -31,5 +31,8 @@ print(df)
 # print(s+"是一位醫生")
 # print(s.strip()+"是一位醫生")
 
-df1=pd.DataFram({"product":["iPhone","iPad"],"price":["5000","3000"]})
+  # df1=.DataFram({"product":["iPhone","iPad"],"price":["5000","3000"]})
 
+#print(df)
+print(df["user"])
+print(df["email"])
