@@ -1,0 +1,47 @@
+<tbody>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th1">SWIFT Code</th>
+            <td headers="table2th1">ICBCUS6S</td>
+        </tr>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th2">電話</th>
+            <td headers="table2th2">（408）283-1888 台灣直撥矽谷分行電話：（02）2181-1258</td>
+        </tr>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th3">傳真</th>
+            <td headers="table2th3">（408）283-1678 </td>
+        </tr>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th4">電子信箱</th>
+            <td headers="table2th4">
+            <a class="t-link" href="mailto:SVB1@megabank.com.tw">SVB1@megabank.com.tw</a>
+            </td>
+        </tr>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th5">業務一科 </th>
+            <td headers="table2th5">存款、匯款（408）283-1888分機19</td>
+        </tr>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th6">業務二科</th>
+            <td headers="table2th6">放款、保證（408）283-1888分機48</td>
+        </tr>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th7">會計科</th>
+            <td headers="table2th7">銀行其他綜合事項 （408）283-1888分機12</td>
+        </tr>
+        <tr>
+            <!-- 預設 th 水平置中 td 至左，可套用 .u-tal 置左及 .u-tar 置右 -->
+            <th class="u-tal" id="table2th8">美元 </th>
+            <td headers="table2th8">
+            Federal Reserve Bank of San Francisco<br />
+            ABA#：1211-41754
+            </td>
+        </tr>
+    </tbody>
