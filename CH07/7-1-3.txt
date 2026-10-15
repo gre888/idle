@@ -1,0 +1,12 @@
+import requests
+
+url = "https://httpbin.org/get"
+
+payload = {
+    "q": "iphone",
+    "min_price": None, # None 會直接被忽略
+    "max_price": ""    # 空字串會保留鍵，但值為空
+}
+
+res = requests.get(url, params=payload)
+print(f"處理後的網址：{res.url}")

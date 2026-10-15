@@ -1,0 +1,10 @@
+import requests
+
+url = "https://httpbin.org/get"
+my_params = {"id": "12345"}
+my_headers = {"User-Agent": "MyCustomBot/1.0"}
+
+res = requests.get(url, params=my_params, headers=my_headers)
+
+# 檢查伺服器收到的內容
+print(res.json( )["headers"]["User-Agent"])

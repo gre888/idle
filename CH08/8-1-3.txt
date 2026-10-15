@@ -1,0 +1,7 @@
+html = "<html><body><div><p><b id='target'>標籤文字</b></p></div></body></html>"
+soup = BeautifulSoup(html, 'html.parser')
+b_tag = soup.find(id='target')
+# 使用 .parents 迭代器會從最近的父層一路往上找到 html
+for parent in b_tag.parents:
+    if parent is not None:
+        print(f"上層標籤有：{parent.name}")
