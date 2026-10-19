@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "C:/Python/Python314/python.exe",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.extraPaths": [
+    "C:/Python/Python314/Lib/site-packages"
+  ]
+}

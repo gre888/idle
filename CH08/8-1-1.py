@@ -24,7 +24,10 @@ list_tag = soup.find("ul")
 print(f'ul父節點{list_tag.children}')
 for child in list_tag.children:
     # print(type(child))
-  if child.name=="li":
+  if child.name:
     print(f'ul子節點{child.name},內容{child.text}')
 
-
+for content in list_tag.contents:
+    if content.name:
+        print(f'ul子節點{content.name},內容{content.text}')
+        

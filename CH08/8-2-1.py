@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 
 html = """
 <div id="content">
@@ -13,4 +12,16 @@ html = """
 """
 soup = BeautifulSoup(html, 'html.parser')
 
+footer=soup.find(id="footer")
+print(footer)
+print(footer.text)
+
+match=re.search(r"\d{4}-\d{2}-\d{2}", footer.text)
+if match:
+    print(match.group(1))
+
+
+items=soup.select("ul.item-list li.item")
+for item in items:
+    print(item.text)
 
