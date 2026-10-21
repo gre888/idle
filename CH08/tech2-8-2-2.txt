@@ -13,16 +13,3 @@ html = """
 """
 soup = BeautifulSoup(html, 'html.parser')
 
-# 1. 用 ID 選取 (#)
-footer = soup.select_one("#footer")
-print(f"頁尾文字：{footer.text}")
-
-# 2. 用 Class 選取 (.)
-items = soup.select(".item")
-print(f"商品數量：{len(items)}")
-# 3. 組合選取 (同時具備 item 和 hot 兩個 class 的 li)
-hot_items = soup.select("li.item.hot")
-for hi in hot_items:
-    print(f"熱門商品：{hi.text}")
-
-
