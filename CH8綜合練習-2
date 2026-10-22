@@ -1,0 +1,36 @@
+from bs4 import BeautifulSoup
+
+html_data = """
+<div class="movie-container">
+    <div class="movie-item">
+        <h3 class="name">   全面啟動 (Inception)   </h3>
+        <p class="rating">評分：8.8</p>
+        <div class="tags">
+            <span>科幻</span><span>懸疑</span><span>動作</span>
+        </div>
+    </div>
+    <div class="movie-item">
+        <h3 class="name">   玩具總動員 (Toy Story)   </h3>
+        <p class="rating">評分：8.3</p>
+        <div class="tags">
+            <span>動畫</span><span>冒險</span><span>喜劇</span>
+        </div>
+    </div>
+</div>
+"""
+
+soup = BeautifulSoup(html_data, "html.parser")
+movies = {}
+
+# 1. 找出所有電影區塊
+for item in soup.select(".movie-item"):
+    # 2. 電影名稱，去除前後空白與換行
+    name = item.select_one(".name").text.strip()
+    # 3. 評分：移除「評分：」後轉成 float
+    rating_text = item.select_one(".rating").text
+    rating = float(rating_text.replace("評分：", "").strip())
+    # 4. 用列表生成式取出所有標籤
+    tags = [span.text for span in item.select(".tags span")]
+    # 5. 存入字典：名稱為 Key
+    movies[name] = {"rating": rating, "tags": tags}
+print(movies)
