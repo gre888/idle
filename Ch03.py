@@ -1,109 +1,100 @@
 
-# #3-2-1：索引、欄位「一致」時的串接做法
+# # #3-2-1：索引、欄位「一致」時的串接做法
 
-import numpy as np
-import pandas as pd
-def make_random_df(index, columns, seed):
-  np.random.seed(seed)
-  df = pd.DataFrame()
-  for column in columns:
-    df[column] = np.random.choice(range(1, 101), len(index))
-  df.index = index
-  return df
-columns = ["apple", "orange", "banana"]
-df_data1 = make_random_df(range(1, 5), columns, 0)
-df_data2 = make_random_df(range(1, 5), columns, 1)
-print(df_data1)
-print(df_data2)
-
-
+# import numpy as np
+# import pandas as pd
+# def make_random_df(index, columns, seed):
+#   np.random.seed(seed)
+#   df = pd.DataFrame()
+#   for column in columns:
+#     df[column] = np.random.choice(range(1, 101), len(index))
+#   df.index = index
+#   return df
+# columns = ["apple", "orange", "banana"]
+# df_data1 = make_random_df(range(1, 5), columns, 0)
+# df_data2 = make_random_df(range(1, 5), columns, 1)
+# print(df_data1)
+# print(df_data2)
 
 
-df1 = pd.concat( [df_data1, df_data2], axis=0)
-print(df1)
+# df1 = pd.concat( [df_data1, df_data2], axis=0, ignore_index=True)
+# df1.index = range(1, len(df1)+1)
+# print(df1)
 
-
-
-
-df2 = pd.concat([df_data1, df_data2], axis=1)
-print(df2)
+# df2 = pd.concat([df_data1, df_data2], axis=1)
+# print(df2)
 
 
 
 
 
-# #3-2-2：索引、欄位「不一致」時的串接做法
+# # #3-2-2：索引、欄位「不一致」時的串接做法
 
-import numpy as np
-import pandas as pd
+# import numpy as np
+# import pandas as pd
 
-def make_random_df(index, columns, seed):
-  np.random.seed(seed)
-  df = pd.DataFrame()
-  for column in columns:
-    df[column] = np.random.choice(range(1, 101), len(index))
-  df.index = index
-  return df
+# def make_random_df(index, columns, seed):
+#   np.random.seed(seed)
+#   df = pd.DataFrame()
+#   for column in columns:
+#     df[column] = np.random.choice(range(1, 101), len(index))
+#   df.index = index
+#   return df
 
-columns1 = ["apple", "orange", "banana"]
-columns2 = ["orange", "kiwifruit", "banana"]
-df_data1 = make_random_df(range(1, 5), columns1, 0)
-df_data2 = make_random_df(np.arange(1, 8, 2), columns2, 1)
+# columns1 = ["apple", "orange", "banana"]
+# columns2 = ["orange", "kiwifruit", "banana"]
+# df_data1 = make_random_df(range(1, 5), columns1, 0)
+# df_data2 = make_random_df(np.arange(1, 8, 2), columns2, 1)
 
-print(df_data1)
-print(df_data2)
-
-
+# print(df_data1)
+# print(df_data2)
 
 
-
-df1 = pd.concat([df_data1, df_data2], axis=0)
-print(df1)
+# df1 = pd.concat([df_data1, df_data2], axis=0)
+# print(df1)
 
 
 
-
-
-df2 = pd.concat([df_data1, df_data2], axis=1)
-print(df2)
+# df2 = pd.concat([df_data1, df_data2], axis=1)
+# print(df2)
 
 
 
 
-# #3-2-3：於橫向串接時增列上一層的欄位
+# # #3-2-3：於橫向串接時增列上一層的欄位
 
-import numpy as np
-import pandas as pd
+# import numpy as np
+# import pandas as pd
 
-def make_random_df(index, columns, seed):
-  np.random.seed(seed)
-  df = pd.DataFrame()
-  for column in columns:
-    df[column] = np.random.choice(range(1, 101), len(index))
-  df.index = index
-  return df
+# def make_random_df(index, columns, seed):
+#   np.random.seed(seed)
+#   df = pd.DataFrame()
+#   for column in columns:
+#     df[column] = np.random.choice(range(1, 101), len(index))
+#   df.index = index
+#   return df
 
-columns = ["apple", "orange", "banana"]
-df_data1 = make_random_df(range(1, 5), columns, 0)
-df_data2 = make_random_df(range(1, 5), columns, 1)
+# columns = ["apple", "orange", "banana"]
+# df_data1 = make_random_df(range(1, 5), columns, 0)
+# df_data2 = make_random_df(range(1, 5), columns, 1)
 
-print(df_data1)
-print(df_data2)
+# print(df_data1)
+# print(df_data2)
 
 
 
 
 
-df = pd.concat([df_data1, df_data2], axis=1, keys=["X", "Y"])
-print(df)
+# df = pd.concat([df_data1, df_data2], axis=1, keys=["X", "Y"])
+# print(df)
 
 
 
 
-# 修正 MultiIndex 欄位選取語法：改用 df[("Y", "banana")]
+# # 修正 MultiIndex 欄位選取語法：改用 df[("Y", "banana")]
 
-Y_banana = df[("Y", "banana")]
-print(Y_banana)
+# Y_banana = df[("Y", "banana")]
+# print(Y_banana)
 
 
 
@@ -129,7 +120,7 @@ print('---- df2 ----\n', df2)
 
 
 
-df3 = pd.merge(df1, df2, on="fruits", how="inner")
+df3 = pd.merge(df1, df2, on=["fruits", "year"], how="inner")
 print('---- df3 ----\n', df3)
 
 
@@ -137,63 +128,63 @@ print('---- df3 ----\n', df3)
 
 # #3-3-3：用 merge() 做 DataFrame 的聯集合併
 
-df3 = pd.merge(df1, df2, on="fruits", how="outer")
-print('---- df3 ----\n', df3)
+df5 = pd.merge(df1, df2, on=["fruits", "year"], how="outer")
+print('---- df5 ----\n', df5)
 
 
 
 
-# #3-3-4：透過「具關聯性的欄位」合併多個 DataFrame(一)
+# # #3-3-4：透過「具關聯性的欄位」合併多個 DataFrame(一)
 
-import pandas as pd
-order_df = pd.DataFrame([[1000, 2546, 103],
-  [1001, 4352, 101],
-  [1002, 342, 101]],
-  columns=["id", "item_id", "customer_id"])
-print('-----order_df-----')
-print(order_df)
+# import pandas as pd
+# order_df = pd.DataFrame([[1000, 2546, 103],
+#   [1001, 4352, 101],
+#   [1002, 342, 101]],
+#   columns=["id", "item_id", "customer_id"])
+# print('-----order_df-----')
+# print(order_df)
 
-customer_df = pd.DataFrame([[101, "Tanaka"],
-  [102, "Suzuki"],
-  [103, "Kato"]],
-  columns=["id", "name"])
-print('-----customer_df-----')
-print(customer_df)
-
-
-
-
-order_df = pd.merge(order_df, customer_df, left_on="customer_id",
-right_on="id", how="inner")
-print('-----交集合併-----')
-print(order_df)
+# customer_df = pd.DataFrame([[101, "Tanaka"],
+#   [102, "Suzuki"],
+#   [103, "Kato"]],
+#   columns=["id", "name"])
+# print('-----customer_df-----')
+# print(customer_df)
 
 
 
 
-# #3-3-5：透過「具關聯性的欄位」合併多個DataFrame (二)
-
-import pandas as pd
-order_df = pd.DataFrame([[1000, 2546, 103],
-  [1001, 4352, 101],
-  [1002, 342, 101]],
-  columns=["id", "item_id", "customer_id"])
-print('----訂貨紀錄----\n', order_df)
-
-customer_df = pd.DataFrame([["Tanaka"],
-  ["Suzuki"],
-  ["Kato"]],
-  columns=["name"])
-
-customer_df.index = [101, 102, 103]
-print('----客戶資訊----\n', customer_df)
+# order_df = pd.merge(order_df, customer_df, left_on="customer_id",
+# right_on="id", how="inner")
+# print('-----交集合併-----')
+# print(order_df)
 
 
 
 
-order_df = pd.merge(order_df, customer_df, left_on="customer_id",
-                    right_index=True, how="inner")
-print('----order_df----\n', order_df)
+# # #3-3-5：透過「具關聯性的欄位」合併多個DataFrame (二)
+
+# import pandas as pd
+# order_df = pd.DataFrame([[1000, 2546, 103],
+#   [1001, 4352, 101],
+#   [1002, 342, 101]],
+#   columns=["id", "item_id", "customer_id"])
+# print('----訂貨紀錄----\n', order_df)
+
+# customer_df = pd.DataFrame([["Tanaka"],
+#   ["Suzuki"],
+#   ["Kato"]],
+#   columns=["name"])
+
+# customer_df.index = [101, 102, 103]
+# print('----客戶資訊----\n', customer_df)
+
+
+
+
+# order_df = pd.merge(order_df, customer_df, left_on="customer_id",
+#                     right_index=True, how="inner")
+# print('----order_df----\n', order_df)
 
 
 
